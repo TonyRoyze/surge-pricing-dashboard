@@ -47,7 +47,7 @@ const InputControls: React.FC<InputControlsProps> = ({ formData, onInputChange, 
         <Label htmlFor={id} className="text-sm font-semibold tracking-wide uppercase text-muted-foreground/80">
           {label}
         </Label>
-        <div className="relative flex items-center max-w-[14rem] rounded-lg shadow-sm">
+        <div className="relative flex items-center max-w-56 rounded-lg shadow-sm">
           <button
             type="button"
             onClick={decrement}
@@ -107,11 +107,11 @@ const InputControls: React.FC<InputControlsProps> = ({ formData, onInputChange, 
             <Label htmlFor="Expected_Ride_Duration" className="text-sm font-semibold tracking-wide uppercase text-muted-foreground/80">
               Expected Ride Duration
             </Label>
-            <div className="relative flex items-center max-w-[18rem] rounded-lg shadow-sm">
+            <div className="relative flex items-center max-w-72 rounded-lg shadow-sm">
               <button
                 type="button"
                 onClick={() => handleChange("Expected_Ride_Duration", clamp(normalizeStep(formData.Expected_Ride_Duration - 0.25, 0.25), 0.25, 6))}
-                className="h-10 min-w-[4.5rem] rounded-l-lg border border-border bg-muted px-3 text-sm font-semibold text-foreground hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
+                className="h-10 min-w-18 rounded-l-lg border border-border bg-muted px-3 text-sm font-semibold text-foreground hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
                 aria-label="Decrease duration by 15 minutes"
               >
                 -15m
@@ -126,7 +126,7 @@ const InputControls: React.FC<InputControlsProps> = ({ formData, onInputChange, 
               <button
                 type="button"
                 onClick={() => handleChange("Expected_Ride_Duration", clamp(normalizeStep(formData.Expected_Ride_Duration + 0.25, 0.25), 0.25, 6))}
-                className="h-10 min-w-[4.5rem] rounded-r-lg border border-border bg-muted px-3 text-sm font-semibold text-foreground hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
+                className="h-10 min-w-18 rounded-r-lg border border-border bg-muted px-3 text-sm font-semibold text-foreground hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
                 aria-label="Increase duration by 15 minutes"
               >
                 +15m
